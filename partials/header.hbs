@@ -1,6 +1,6 @@
 <header class="hero is-primary is-large" style="background-image:url('{{@site.cover_image}}')">
     <div class="hero-head">
-        <nav class="navbar is-primary">
+        <nav class="navbar is-primary container">
             <div class="container">
                 <div class="navbar-burger" data-target="navMenu">
                     <span></span>
@@ -9,10 +9,7 @@
                 </div>
             </div>
             <div class="navbar-menu" id="navMenu">
-                <a href="/" class="navbar-item">Item 1</a>
-                <a href="/" class="navbar-item">Item 2</a>
-                <a href="/" class="navbar-item">Item 3</a>
-                <a href="/" class="navbar-item">Item 4</a>
+                {{navigation}}
             </div>
         </nav>
     </div>
