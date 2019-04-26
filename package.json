@@ -1,0 +1,19 @@
+{
+  "name": "carnie-theme",
+  "description": "a ghost theme for learning",
+  "version": "0.0.1",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "author": {
+    "name": "larry",
+    "email": "takuma886@gmail.com"
+  },
+  "config": {
+    "posts_per_page": 3
+  },
+  "dependencies": {
+    "bulma": "^0.7.4"
+  }
+}
