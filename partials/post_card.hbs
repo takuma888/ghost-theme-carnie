@@ -7,15 +7,17 @@
     </div>
     {{/if}}
     <div class="card-content">
-        {{#if author.profile_image}}
+        {{#primary_author}}
+        {{#if profile_image}}
             <div class="media">
                 <div class="media-left">
                     <figure class="image is-48x48">
-                        <img src="{{author.profile_image}}" alt="Profile Image">
+                        <img src="{{profile_image}}" alt="Profile Image">
                     </figure>
                 </div>
             </div>
         {{/if}}
+        {{/primary_author}}
         <div class="content">
             <h1 class="title is-4">{{title}}</h1>
             <p>
@@ -26,7 +28,7 @@
                 {{/if}}
             </p>
             <p>
-                {{author}} in {{tags}}
+                {{#primary_author}}{{name}}{{/primary_author}} in {{tags}}
                 on <time>{{date}}</time>
             </p>
         </div>
