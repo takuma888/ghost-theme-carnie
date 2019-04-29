@@ -1,0 +1,15 @@
+<nav class="columns pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column">
+        {{#if prev}}
+            <a class="pagination-previous" href="{{page_url prev}}">&larr; Newer Posts</a>
+        {{/if}}
+    </div>
+    <div class="column">
+            Page {{page}} of {{pages}}
+    </div>
+    <div class="column">
+        {{#if next}}
+            <a class="pagination-next" href="{{page_url next}}">Older Posts &rarr;</a>
+        {{/if}}
+    </div>
+</nav>
