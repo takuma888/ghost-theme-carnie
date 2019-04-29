@@ -8,21 +8,21 @@
         <div class="media">
             <div class="media-left">
                 <figure class="image is-48x48">
-                    {{#author}}
+                    {{#primary_author}}
                         <img src="{{profile_image}}" alt="{{name}}'s Picture" />
-                    {{/author}}
+                    {{/primary_author}}
                 </figure>
             </div>
             <div class="media-content">
                 <p class="title is-4">{{title}}</p>
-                <p class="subtitle is-6">@{{#author}}{{name}}{{/author}}</p>
+                <p class="subtitle is-6">@{{#primary_author}}{{name}}{{/primary_author}}</p>
             </div>
         </div>
 
         <div class="content">
             {{excerpt}} {{tags}}
             <br>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            {{date published_at timeago="true"}}
         </div>
     </div>
 </div>
