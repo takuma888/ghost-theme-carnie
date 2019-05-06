@@ -4,14 +4,14 @@
 <main class="container">
     <div class="columns is-multiline">
         {{#foreach posts}}
-            <div class="column is-half">
+            <div class="column is-one-third">
                 {{> post_card}}
             </div>
         {{/foreach}}
     </div>
 </main>
 
-<div class="container">
+<div class="container main_pagination">
     <div class="columns">
         <div class="column is-one-quarter"></div>
         <div class="column">{{pagination}}</div>

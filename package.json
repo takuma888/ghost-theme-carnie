@@ -11,7 +11,7 @@
     "email": "takuma886@gmail.com"
   },
   "config": {
-    "posts_per_page": 3
+    "posts_per_page": 6
   },
   "dependencies": {
     "bulma": "^0.7.4"

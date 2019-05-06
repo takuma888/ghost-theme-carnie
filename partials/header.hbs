@@ -1,4 +1,4 @@
-<header class="hero is-primary is-large" style="background-image:url('{{@site.cover_image}}')">
+<header class="hero is-primary {{#is "index"}}is-large{{/is}}" style="background-image:url('{{@site.cover_image}}')">
     <div class="hero-head">
         <nav class="navbar is-primary container">
             <div class="container">
@@ -13,8 +13,15 @@
             </div>
         </nav>
     </div>
-    <div class="hero-body has-text-centered" >
-        <h1 class="title">{{@site.title}}</h1>
-        <h2 class="subtitle">{{@site.description}}</h2>
-    </div>
+    {{#is "index"}}
+        <div class="hero-body has-text-centered" >
+            <h1 class="title">{{@site.title}}</h1>
+            <h2 class="subtitle">{{@site.description}}</h2>
+        </div>
+    {{/is}}
+    {{#is "post"}}
+        <div class="hero-body is-post has-text-centered" >
+        </div>
+    {{/is}}
+
 </header>

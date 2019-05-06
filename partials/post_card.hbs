@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-image">
         <figure class="image">
-            <img src="{{feature_image}}" alt="Placeholder image">
+            <a href="{{url}}"><img src="{{feature_image}}" alt="Placeholder image"></a>
         </figure>
     </div>
     <div class="card-content">
@@ -14,13 +14,13 @@
                 </figure>
             </div>
             <div class="media-content">
-                <p class="title is-4">{{title}}</p>
+                <p class="title is-4"><a href="{{url}}" class="has-text-dark">{{title}}</a></p>
                 <p class="subtitle is-6">@{{#primary_author}}{{name}}{{/primary_author}}</p>
             </div>
         </div>
 
         <div class="content">
-            {{excerpt}} {{tags}}
+            <a href="{{url}}" class="has-text-dark">{{excerpt}}</a> {{tags}}
             <br>
             {{date published_at timeago="true"}}
         </div>
