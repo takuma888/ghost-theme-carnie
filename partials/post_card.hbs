@@ -1,36 +1,28 @@
-<article class="card">
-    {{#if feature_image}}
+<div class="card">
     <div class="card-image">
-        <figure class="image ">
-            <img src="{{feature_image}}" alt="{{title}}">
+        <figure class="image">
+            <a href="{{url}}"><img src="{{feature_image}}" alt="Placeholder image"></a>
         </figure>
     </div>
-    {{/if}}
     <div class="card-content">
-        {{#primary_author}}
-        {{#if profile_image}}
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="{{profile_image}}" alt="Profile Image">
-                    </figure>
-                </div>
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                    {{#primary_author}}
+                        <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}'s Picture" /></a>
+                    {{/primary_author}}
+                </figure>
             </div>
-        {{/if}}
-        {{/primary_author}}
+            <div class="media-content">
+                <p class="title is-4"><a href="{{url}}" class="has-text-dark">{{title}}</a></p>
+                <p class="subtitle is-6">{{#primary_author}}<a href="{{url}}">@{{name}}</a>{{/primary_author}}</p>
+            </div>
+        </div>
+
         <div class="content">
-            <h1 class="title is-4">{{title}}</h1>
-            <p>
-                {{#if meta_description}}
-                    {{meta_description}}
-                {{else}}
-                    {{excerpt words="40"}}...
-                {{/if}}
-            </p>
-            <p>
-                {{#primary_author}}{{name}}{{/primary_author}} in {{tags}}
-                on <time>{{date}}</time>
-            </p>
+            <a href="{{url}}" class="has-text-dark">{{excerpt}}</a> {{tags}}
+            <br>
+            {{date published_at timeago="true"}}
         </div>
     </div>
-</article>
+</div>

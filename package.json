@@ -1,6 +1,9 @@
 {
   "name": "carnie-theme",
   "description": "a ghost theme for learning",
+  "keywords": [
+    "ghost-theme"
+  ],
   "version": "0.0.1",
   "engines": {
     "ghost": ">=2.0.0",
@@ -11,7 +14,7 @@
     "email": "takuma886@gmail.com"
   },
   "config": {
-    "posts_per_page": 3
+    "posts_per_page": 6
   },
   "dependencies": {
     "bulma": "^0.7.4"

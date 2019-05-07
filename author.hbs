@@ -1,0 +1,46 @@
+{{!< default}}
+
+    <header class="hero is-primary is-large" style="background-image:url('{{#author}}{{cover_image}}{{/author}}')">
+
+        <div class="hero-head">
+            <nav class="navbar is-primary container">
+                <div class="container">
+                    <div class="navbar-burger" data-target="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="navbar-menu" id="navMenu">
+                    {{navigation}}
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body has-text-centered" >
+            <h1 class="title">{{#author}}{{name}}{{/author}}</h1>
+            <h2 class="subtitle"> {{#author}}{{bio}}{{/author}}</h2>
+            <h3 class="subtitle"> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}</h3>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="columns is-multiline">
+            {{#foreach posts}}
+                <div class="column is-one-third">
+                    {{> post_card}}
+                </div>
+            {{/foreach}}
+        </div>
+    </main>
+
+
+    <div class="container main_pagination">
+        <div class="columns">
+            <div class="column is-one-quarter"></div>
+            <div class="column">{{pagination}}</div>
+            <div class="column is-one-quarter"></div>
+        </div>
+    </div>
+
+
+

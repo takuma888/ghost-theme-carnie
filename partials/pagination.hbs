@@ -1,18 +1,15 @@
-
-
-<div class="container">
-    <div class="columns">
-        <div class="column"></div>
-        <div class="column is-half">
-            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                <a class="pagination-previous" href="{{page_url prev}}" {{#if prev}}{{else}}disabled{{/if}}>&larr; Newer Posts</a>
-                <a class="pagination-next" href="{{page_url next}}" {{#if next}}{{else}}disabled{{/if}}>Older Posts &rarr;</a>
-
-                <ul class="pagination-list">
-                    <span class="pagination-link is-current">Page {{page}} of {{pages}}</span>
-                </ul>
-            </nav>
-        </div>
-        <div class="column"></div>
+<nav class="columns pagination is-centered" role="navigation" aria-label="pagination">
+    <div class="column">
+        {{#if prev}}
+            <a class="pagination-previous" href="{{page_url prev}}">&larr; Newer Posts</a>
+        {{/if}}
     </div>
-</div>
+    <div class="column">
+            Page {{page}} of {{pages}}
+    </div>
+    <div class="column">
+        {{#if next}}
+            <a class="pagination-next" href="{{page_url next}}">Older Posts &rarr;</a>
+        {{/if}}
+    </div>
+</nav>

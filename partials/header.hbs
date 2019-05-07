@@ -1,20 +1,42 @@
-<header class="hero is-primary is-large" style="background-image:url('{{@site.cover_image}}')">
-    <div class="hero-head">
-        <nav class="navbar is-primary container">
-            <div class="container">
-                <div class="navbar-burger" data-target="navMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+{{#is "author"}}
+{{else}}
+    {{#is "index"}}
+        <header class="hero is-primary is-large" style="background-image:url('{{@site.cover_image}}')">
+    {{else}}
+        {{#is "tag"}}
+            <header class="hero is-primary is-large" style="background-image:url('{{#tag}}{{feature_image}}{{/tag}}')">
+        {{else}}
+            <header class="hero is-primary">
+        {{/is}}
+    {{/is}}
+        <div class="hero-head">
+            <nav class="navbar is-primary container">
+                <div class="container">
+                    <div class="navbar-burger" data-target="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
+                <div class="navbar-menu" id="navMenu">
+                    {{navigation}}
+                </div>
+            </nav>
+        </div>
+    {{#is "index"}}
+            <div class="hero-body has-text-centered" >
+                <h1 class="title">{{@site.title}}</h1>
+                <h2 class="subtitle">{{@site.description}}</h2>
             </div>
-            <div class="navbar-menu" id="navMenu">
-                {{navigation}}
-            </div>
-        </nav>
-    </div>
-    <div class="hero-body" >
-        <h1 class="title has-text-centered">{{@site.title}}</h1>
-        <h2 class="subtitle has-text-centered">{{@site.description}}</h2>
-    </div>
-</header>
+    {{else}}
+        {{#is "tag"}}
+                <div class="hero-body has-text-centered" >
+                    <h1 class="title">{{#tag}}{{name}}{{/tag}}</h1>
+                    <h2 class="subtitle"> {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}</h2>
+                </div>
+        {{else}}
+            <div class="hero-body is-post has-text-centered" >
+        {{/is}}
+    {{/is}}
+    </header>
+{{/is}}

@@ -1,5 +1,12 @@
+
+
+.card {
+    margin: 1rem auto 0;
+}
+
 header {
     background-size: cover;
+    margin-bottom: 1rem;
 }
 
 header .hero-head{
@@ -7,23 +14,62 @@ header .hero-head{
     position: fixed;
     width: 100%;
     z-index: 999;
-
 }
 
-header .navbar-menu{
-    background-color: transparent!important;
+.hero-body.is-post {
+    padding: 1.6rem 1.5rem;
+}
+
+.navbar-menu {
     width: 100%;
 }
 
-nav.pagination {
-    margin: 1rem 0;
+.main_pagination {
+    margin: 1rem auto;
 }
 
-main.container {
-    margin: 1rem auto 0;
+footer {
+    margin-top: 3rem;
 }
 
 footer .copyright {
-    margin: 4rem auto 0;
+    margin-top: 6rem;
 }
 
+
+/*post*/
+
+main.post h1 {
+    font-size: 3rem;
+    margin: 0 auto 5rem;
+}
+
+main.post header section {
+    margin: 6rem auto 0;
+}
+
+main.post header figure {
+    margin: 0 -10vw -150px;
+}
+
+main.post header figure  img{
+    width: 100%;
+    object-fit: cover;
+
+}
+
+main.post section.content {
+    position: relative;
+    z-index: 50;
+    margin: 0 5%;
+    padding: 5rem;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+}
+
+main.post footer {
+    margin: 3rem 5% 6rem;
+    background-color: white;
+}
+
+/*post end*/

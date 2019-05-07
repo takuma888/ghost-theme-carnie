@@ -1,0 +1,2 @@
+
+# ghost-theme-carnie
