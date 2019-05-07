@@ -9,13 +9,13 @@
             <div class="media-left">
                 <figure class="image is-48x48">
                     {{#primary_author}}
-                        <img src="{{profile_image}}" alt="{{name}}'s Picture" />
+                        <a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}'s Picture" /></a>
                     {{/primary_author}}
                 </figure>
             </div>
             <div class="media-content">
                 <p class="title is-4"><a href="{{url}}" class="has-text-dark">{{title}}</a></p>
-                <p class="subtitle is-6">@{{#primary_author}}{{name}}{{/primary_author}}</p>
+                <p class="subtitle is-6">{{#primary_author}}<a href="{{url}}">@{{name}}</a>{{/primary_author}}</p>
             </div>
         </div>
 

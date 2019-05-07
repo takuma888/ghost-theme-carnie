@@ -1,6 +1,9 @@
 {
   "name": "carnie-theme",
   "description": "a ghost theme for learning",
+  "keywords": [
+    "ghost-theme"
+  ],
   "version": "0.0.1",
   "engines": {
     "ghost": ">=2.0.0",
